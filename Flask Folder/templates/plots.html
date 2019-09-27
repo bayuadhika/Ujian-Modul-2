@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Ini Page Plot</h1>
+    <i>Mau lihat hasil plot ya disini tempatnya</i>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart" id="count-type1">
+
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="chart" id="dua">
+            
+
+            </div>
+        </div>  
+
+    </div>
+    
+
+    <script>
+        Plotly.plot('count-type1' , {{data[0] | safe}} , {})
+        Plotly.plot('dist_total' , {{data[1] | safe}} , {})
+    </script>
+
+{% endblock body %} 
